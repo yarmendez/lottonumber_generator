@@ -1,0 +1,53 @@
+//******************************************************************
+// Eng. Yovani R. Mendez : YRM 
+//
+// Application Goal : This goal for this application
+//                      is to randomly find 5 number between 1-59,
+//                      one number between 1-35, and display them
+//                      in the form.
+//                     
+//******************************************************************
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace lucky_lotto_app
+{
+    public partial class Form1 : Form
+    {
+        // 130506 : YRM : Variable declaration
+        int number1, number2, number3, number4, meganumber;
+        double randNumber, minNum, maxNum;
+
+        // Form constructor
+        public Form1()
+        {
+            // Initialize form
+            InitializeComponent();
+        }
+
+        // Button code
+        private void btn_Lucky_Click(object sender, EventArgs e)
+        {
+
+            // declare ran1 var and asign type Random
+            var ran1 = new Random();
+
+            // Populate text boxes
+            txtbx1.Text = ran1.Next(1, 59).ToString();
+            txtbx2.Text = ran1.Next(1, 59).ToString();
+            txtbx3.Text = ran1.Next(1, 59).ToString();
+            txtbx4.Text = ran1.Next(1, 59).ToString();
+            txtbx5.Text = ran1.Next(1, 59).ToString();
+            txtbx6.Text = ran1.Next(1, 35).ToString();
+        }
+
+    }
+}
+
